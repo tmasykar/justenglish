@@ -1,0 +1,29 @@
+# 
+# Author : Tanzir Masykar
+# Title : Wilcoxon signed rank for English vowel contrast
+# Wilcoxon was used because the data was less than 30
+library(readxl)
+vowcont <- read_excel("data/vowcont.xlsx")
+View(vowcont)
+print (vowcont)
+shapiro.test(vowcont$F1beat)
+shapiro.test(vowcont$F2beat)
+shapiro.test(vowcont$F1bit)
+shapiro.test(vowcont$F2bit)
+shapiro.test(vowcont$F1bet)
+shapiro.test(vowcont$F2bet)
+shapiro.test(vowcont$F1bat)
+shapiro.test(vowcont$F2bat)
+shapiro.test(vowcont$F1bud)
+shapiro.test(vowcont$F2bud)
+shapiro.test(vowcont$F1pot)
+shapiro.test(vowcont$F2pot)
+shapiro.test(vowcont$F1port)
+shapiro.test(vowcont$F2port)
+shapiro.test(vowcont$F1foot)
+shapiro.test(vowcont$F2foot)
+shapiro.test(vowcont$F1food)
+shapiro.test(vowcont$F2food)
+wilcox.test(vowcont$F1beat, vowcont$F1bit, paired =  TRUE)
+wilcox.test(vowcont$F2beat, vowcont$F2bit, paired =  TRUE)
+ 
